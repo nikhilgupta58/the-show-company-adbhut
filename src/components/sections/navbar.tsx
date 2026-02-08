@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 interface NavbarProps {
   activePage?: string;
@@ -36,20 +35,17 @@ const Navbar = ({ activePage = 'Home' }: NavbarProps) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[100] w-full transition-all duration-300 ${
-        isScrolled ? 'bg-black/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}
+      className={`fixed overflow-hidden top-0 h-[88px] left-0 right-0 z-[100] w-full transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        }`}
     >
       <div className="max-w-[1200px] mx-auto flex items-center justify-between w-full h-[72px] md:h-[88px] px-5 sm:px-8">
         {/* Logo */}
         <a href="/" className="flex items-center flex-shrink-0 relative z-[110]">
-          <div className="relative w-[140px] h-[24px] md:w-[181px] md:h-[31px]">
-            <Image
-              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/dc392388-8c5b-4717-bf8b-ddc1836c2430-monkseventpro-framer-website/assets/svgs/7qeFAFnaRLjmRmn49lSr4xr2N8-1.svg"
+          <div className="relative w-[140px] md:w-[181px]">
+            <img
+              src="./logo.png"
               alt="Monks Event"
-              fill
-              className="object-contain"
-              priority
+              className="object-contain scale-110"
             />
           </div>
         </a>
@@ -60,11 +56,10 @@ const Navbar = ({ activePage = 'Home' }: NavbarProps) => {
             <a
               key={link.name}
               href={link.href}
-              className={`text-[15px] font-semibold transition-colors duration-200 ${
-                link.name === activePage
-                  ? 'text-white'
-                  : 'text-[#999999] hover:text-white'
-              }`}
+              className={`text-[15px] font-semibold transition-colors duration-200 ${link.name === activePage
+                ? 'text-white'
+                : 'text-[#999999] hover:text-white'
+                }`}
             >
               {link.name}
             </a>
@@ -93,18 +88,16 @@ const Navbar = ({ activePage = 'Home' }: NavbarProps) => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-black/95 backdrop-blur-lg z-[105] flex flex-col items-center justify-center gap-8 transition-all duration-500 md:hidden ${
-          mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
+        className={`fixed inset-0 bg-black/95 backdrop-blur-lg z-[105] flex flex-col items-center justify-center gap-8 transition-all duration-500 md:hidden ${mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
       >
         {navLinks.map((link, i) => (
           <a
             key={link.name}
             href={link.href}
             onClick={() => setMobileOpen(false)}
-            className={`text-2xl font-bold transition-all duration-300 ${
-              link.name === activePage ? 'text-white' : 'text-[#999] hover:text-white'
-            }`}
+            className={`text-2xl font-bold transition-all duration-300 ${link.name === activePage ? 'text-white' : 'text-[#999] hover:text-white'
+              }`}
             style={{
               transitionDelay: mobileOpen ? `${i * 80}ms` : '0ms',
               opacity: mobileOpen ? 1 : 0,

@@ -36,16 +36,15 @@ const Header = ({ activePage = 'About' }: HeaderProps) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[100] w-full transition-all duration-300 border-b border-white/5 ${
-        isScrolled ? 'bg-black/90 backdrop-blur-md shadow-lg' : 'bg-black/80 backdrop-blur-md'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-[100] w-full transition-all duration-300 border-b border-white/5 ${isScrolled ? 'bg-black/90 backdrop-blur-md shadow-lg' : 'bg-black/80 backdrop-blur-md'
+        }`}
     >
       <div className="max-w-[1200px] mx-auto px-5 sm:px-8 h-[72px] md:h-[88px] flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center relative z-[110]">
           <div className="relative w-[140px] h-[24px] md:w-[181px] md:h-[31px]">
             <Image
-              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/dc392388-8c5b-4717-bf8b-ddc1836c2430-monkseventpro-framer-website/assets/svgs/7qeFAFnaRLjmRmn49lSr4xr2N8-1.svg"
+              src="./logo.png"
               alt="Monks Event Logo"
               fill
               style={{ objectFit: 'contain' }}
@@ -60,9 +59,8 @@ const Header = ({ activePage = 'About' }: HeaderProps) => {
             <a
               key={item.name}
               href={item.href}
-              className={`text-[15px] font-medium transition-all duration-200 hover:text-[#7B4DFF] ${
-                item.name === activePage ? 'text-[#7B4DFF]' : 'text-[#B7B6B6]'
-              }`}
+              className={`text-[15px] font-medium transition-all duration-200 hover:text-[#7B4DFF] ${item.name === activePage ? 'text-[#7B4DFF]' : 'text-[#B7B6B6]'
+                }`}
             >
               {item.name}
             </a>
@@ -91,18 +89,16 @@ const Header = ({ activePage = 'About' }: HeaderProps) => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-black/95 backdrop-blur-lg z-[105] flex flex-col items-center justify-center gap-8 transition-all duration-500 md:hidden ${
-          mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
+        className={`fixed inset-0 bg-black/95 backdrop-blur-lg z-[105] flex flex-col items-center justify-center gap-8 transition-all duration-500 md:hidden ${mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
       >
         {navItems.map((item, i) => (
           <a
             key={item.name}
             href={item.href}
             onClick={() => setMobileOpen(false)}
-            className={`text-2xl font-bold transition-all duration-300 ${
-              item.name === activePage ? 'text-[#7B4DFF]' : 'text-[#999] hover:text-white'
-            }`}
+            className={`text-2xl font-bold transition-all duration-300 ${item.name === activePage ? 'text-[#7B4DFF]' : 'text-[#999] hover:text-white'
+              }`}
             style={{
               transitionDelay: mobileOpen ? `${i * 80}ms` : '0ms',
               opacity: mobileOpen ? 1 : 0,
