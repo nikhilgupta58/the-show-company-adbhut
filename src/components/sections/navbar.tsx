@@ -43,7 +43,7 @@ const Navbar = ({ activePage = 'Home' }: NavbarProps) => {
         <a href="/" className="flex items-center flex-shrink-0 relative z-[110]">
           <div className="relative w-[140px] md:w-[181px]">
             <img
-              src="./logo.png"
+              src="/logo.png"
               alt="Monks Event"
               className="object-contain scale-110"
             />

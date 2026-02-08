@@ -57,7 +57,7 @@ const Footer = () => {
           {/* Logo */}
           <a href="/" className="inline-block">
             <img 
-              src="./logo.png" 
+              src="/logo.png" 
               alt="Monks Event Logo" 
               className="w-[140px] sm:w-[181px] h-auto bg-transparent"
             />

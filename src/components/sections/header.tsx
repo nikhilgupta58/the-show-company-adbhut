@@ -43,7 +43,7 @@ const Header = ({ activePage = 'About' }: HeaderProps) => {
         <a href="/" className="flex items-center relative z-[110]">
           <div className="relative w-[140px] h-[24px] md:w-[181px] md:h-[31px]">
             <Image
-              src="./logo.png"
+              src="/logo.png"
               alt="Monks Event Logo"
               fill
               style={{ objectFit: 'contain' }}
