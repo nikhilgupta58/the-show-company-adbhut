@@ -35,7 +35,7 @@ const Navbar = ({ activePage = 'Home' }: NavbarProps) => {
 
   return (
     <header
-      className={`fixed overflow-hidden top-0 h-[88px] left-0 right-0 z-[100] w-full transition-all duration-300 ${isScrolled ? 'bg-black/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      className={`fixed overflow-hidden top-0 h-[88px] left-0 right-0 z-[100] w-full transition-all duration-300 ${isScrolled ? 'bg-black shadow-lg' : 'bg-transparent'
         }`}
     >
       <div className="max-w-[1200px] mx-auto flex items-center justify-between w-full h-[72px] md:h-[88px] px-5 sm:px-8">

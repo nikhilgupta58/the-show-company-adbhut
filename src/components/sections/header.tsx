@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 interface HeaderProps {
   activePage?: string;
@@ -36,10 +36,9 @@ const Header = ({ activePage = 'About' }: HeaderProps) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[100] w-full transition-all duration-300 border-b border-white/5 ${isScrolled ? 'bg-black/90 backdrop-blur-md shadow-lg' : 'bg-black/80 backdrop-blur-md'
-        }`}
+      className={`fixed top-0 left-0 right-0 z-[100] w-full transition-all duration-300 border-b border-white/5 bg-black`}
     >
-      <div className="max-w-[1200px] mx-auto px-5 sm:px-8 h-[72px] md:h-[88px] flex items-center justify-between">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-8 h-[72px] md:h-[88px] flex items-center justify-between bg-black">
         {/* Logo */}
         <a href="/" className="flex items-center relative z-[110]">
           <div className="relative w-[140px] h-[24px] md:w-[181px] md:h-[31px]">
